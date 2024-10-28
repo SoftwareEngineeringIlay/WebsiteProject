@@ -10,21 +10,8 @@ const routes: Routes = [
   { path: '', component: Home },
   { path: 'electronics', component: Electronics },
   { path: 'sailing', component: Sailing },
-  
-  // Product detail routes for Electronics
-  { path: 'product/wireless-earbuds', component: ProductDetail },
-  { path: 'product/smartwatch', component: ProductDetail },
-  { path: 'product/bluetooth-speaker', component: ProductDetail }, 
-  { path: 'product/tv', component: ProductDetail },
-  
-  // Product detail routes for Sailing
-  { path: 'product/sail-yacht', component: ProductDetail },
-  { path: 'product/sailing-ropes', component: ProductDetail },
-  { path: 'product/sails', component: ProductDetail },
-  { path: 'product/sailing-smartwatch', component: ProductDetail }, 
-  
-  // Fallback route
-  { path: 'product/:id', component: ProductDetail } 
+  { path: 'product/:id', component: ProductDetail },  // Use a single dynamic route
+  { path: '**', redirectTo: '' }  // Fallback to home
 ];
 
 @NgModule({

@@ -64,14 +64,17 @@ export class ProductDetail implements OnInit {
 
   ngOnInit(): void {
     const productName = this.route.snapshot.paramMap.get('id'); // Get the product name from route
-  
+
     // Check if productName is not null before using it
     if (productName) {
-      this.product = this.products.find(product => product.title.toLowerCase() === productName.toLowerCase()); // Find the product by name
+        this.product = this.products.find(product => 
+            product.title.toLowerCase().replace(/ /g, '-') === productName.toLowerCase()
+        ); // Adjusted comparison
     } else {
-      console.error('Product name is null. Please check the route.');
-      // set this.product to a default
-      this.product = this.products[0]; 
+        console.error('Product name is null. Please check the route.');
+        // set this.product to a default
+        this.product = this.products[0]; 
     }
-  }
+}
+
 }
