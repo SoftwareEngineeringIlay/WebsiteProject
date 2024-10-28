@@ -1,0 +1,24 @@
+.product-box {
+    position: relative; /* Needed for positioning the button */
+    margin-bottom: 20px; /* Add margin for spacing */
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional styling */
+    border-radius: 5px; /* Optional styling */
+    background-color: #f9f9f9; /* Optional styling */
+}
+
+.details-button {
+    position: absolute; /* Position it absolutely */
+    bottom: 10px; /* Distance from the bottom */
+    left: 10px; /* Distance from the left */
+    background-color: #007BFF; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+}
+
+.details-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
