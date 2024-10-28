@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
@@ -61,21 +61,28 @@ export class ProductDetail implements OnInit {
     }
   ];
 
-  constructor(private route: ActivatedRoute, private location: Location) { }  // Check this line
-
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router, // Inject Router for navigation
+    private location: Location
+  ) {}
 
   ngOnInit(): void {
     const productName = this.route.snapshot.paramMap.get('id');
 
-    // Check if productName is not null before using it
+    // Check for null productName
     if (productName) {
-        this.product = this.products.find(product => 
-            product.title.toLowerCase().replace(/ /g, '-') === productName.toLowerCase()
-        ); // Adjusted comparison
+      this.product = this.products.find(product => 
+        product.title.toLowerCase().replace(/ /g, '-') === productName.toLowerCase()
+      );
+      
+      // no matching
+      if (!this.product) {
+        this.router.navigate(['']);
+      }
     } else {
-        console.error('Product name is null. Please check the route.');
-        // set this.product to a default
-        this.product = this.products[0]; 
+      // Redirect to home if productName is missing
+      this.router.navigate(['']);
     }
   }
 
