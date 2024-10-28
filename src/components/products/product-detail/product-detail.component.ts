@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-product-detail',
@@ -60,10 +61,11 @@ export class ProductDetail implements OnInit {
     }
   ];
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private location: Location) { }  // Check this line
+
 
   ngOnInit(): void {
-    const productName = this.route.snapshot.paramMap.get('id'); // Get the product name from route
+    const productName = this.route.snapshot.paramMap.get('id');
 
     // Check if productName is not null before using it
     if (productName) {
@@ -75,6 +77,9 @@ export class ProductDetail implements OnInit {
         // set this.product to a default
         this.product = this.products[0]; 
     }
-}
+  }
 
+  goBack(): void {
+    this.location.back();
+  }
 }
