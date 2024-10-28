@@ -6,7 +6,8 @@ import { App } from './app.component';
 import { Home } from '../components/home/home.component';
 import { Electronics } from '../components/electronics/electronics.component';
 import { Sailing } from '../components/sailing/sailing.component';
-import { Product } from '../components/product/product.component';
+import { Product } from '../components/products/product/product.component';
+import { ProductDetail } from '../components/products/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { Product } from '../components/product/product.component';
     Product,
     Home,
     Electronics,
-    Sailing
+    Sailing,
+    ProductDetail
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,18 @@
+<header class="category-header">
+    <h1>{{ product.name }}</h1>
+</header>
+
+<div *ngIf="product">
+    <div class="product-detail-box">
+        <img [src]="product.imageUrl" [alt]="product.name" />
+    </div>
+    <div class="product-detail-box">
+        <h2>{{ product.name }}</h2>
+        <h4>{{ product.price | currency }}</h4>
+        <p>{{ product.description }}</p>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>Submitted by: Ilay Nachshon</p>
+</footer>
