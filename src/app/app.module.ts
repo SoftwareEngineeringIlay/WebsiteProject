@@ -6,12 +6,12 @@ import { AppComponent } from './app.component';
 import { Home } from '../components/home/home.component';
 import { Electronics } from '../components/electronics/electronics.component';
 import { Sailing } from '../components/sailing/sailing.component';
-import { ProductComponent } from '../components/product/product.component';
+import { Product } from '../components/product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
+    Product,
     Home,
     Electronics,
     Sailing
