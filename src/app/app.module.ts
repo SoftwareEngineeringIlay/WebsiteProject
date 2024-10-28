@@ -3,18 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { HomeComponent } from '../components/home/home.component';
-import { ElectronicsComponent } from '../components/electronics/electronics.component';
-import { SailingComponent } from '../components/sailing/sailing.component';
+import { Home } from '../components/home/home.component';
+import { Electronics } from '../components/electronics/electronics.component';
+import { Sailing } from '../components/sailing/sailing.component';
 import { ProductComponent } from '../components/product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    HomeComponent,
-    ElectronicsComponent,
-    SailingComponent
+    Home,
+    Electronics,
+    Sailing
   ],
   imports: [
     BrowserModule,
