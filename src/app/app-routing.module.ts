@@ -7,24 +7,24 @@ import { ProductDetail } from '../components/products/product-detail/product-det
 
 
 const routes: Routes = [
-    { path: '', component: Home },
+  { path: '', component: Home },
   { path: 'electronics', component: Electronics },
   { path: 'sailing', component: Sailing },
   
   // Product detail routes for Electronics
-  { path: 'product/wireless-earbuds', component: ProductDetail }, // Wireless Earbuds
-  { path: 'product/smartwatch', component: ProductDetail }, // Smartwatch
-  { path: 'product/bluetooth-speaker', component: ProductDetail }, // Bluetooth Speaker
-  { path: 'product/tv', component: ProductDetail }, // TV
+  { path: 'product/wireless-earbuds', component: ProductDetail },
+  { path: 'product/smartwatch', component: ProductDetail },
+  { path: 'product/bluetooth-speaker', component: ProductDetail }, 
+  { path: 'product/tv', component: ProductDetail },
   
   // Product detail routes for Sailing
-  { path: 'product/sail-yacht', component: ProductDetail }, // Sail Yacht
-  { path: 'product/sailing-ropes', component: ProductDetail }, // Sailing Ropes
-  { path: 'product/sails', component: ProductDetail }, // Sails
-  { path: 'product/sailing-smartwatch', component: ProductDetail }, // Sailing Smartwatch
+  { path: 'product/sail-yacht', component: ProductDetail },
+  { path: 'product/sailing-ropes', component: ProductDetail },
+  { path: 'product/sails', component: ProductDetail },
+  { path: 'product/sailing-smartwatch', component: ProductDetail }, 
   
   // Fallback route
-  { path: 'product/:id', component: ProductDetail } // Fallback route for other products
+  { path: 'product/:id', component: ProductDetail } 
 ];
 
 @NgModule({

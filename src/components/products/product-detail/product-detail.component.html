@@ -1,18 +1,16 @@
-<header class="category-header">
-    <h1>{{ product.name }}</h1>
+<!-- Product Detail Page Template -->
+<header class="product-header">
+    <h1 class="product-title">{{ product.title }}</h1>
 </header>
 
-<div *ngIf="product">
-    <div class="product-detail-box">
-        <img [src]="product.imageUrl" [alt]="product.name" />
+<section class="product-content">
+    <div class="product-box">
+        <h2 class="product-name">{{ product.title }}</h2>
+        <img [src]="product.imageUrl" alt="{{ product.title }}">
     </div>
-    <div class="product-detail-box">
-        <h2>{{ product.name }}</h2>
-        <h4>{{ product.price | currency }}</h4>
-        <p>{{ product.description }}</p>
+    
+    <div class="product-box">
+        <h2>{{ product.featureTitle }}</h2>
+        <p class="feature-description">{{ product.featureDescription }}</p>
     </div>
-</div>
-
-<footer class="footer">
-    <p>Submitted by: Ilay Nachshon</p>
-</footer>
+</section>
